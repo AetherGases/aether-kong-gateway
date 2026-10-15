@@ -51,4 +51,4 @@ services:
       - name: aether-web-flow-route
         paths:
           - /dashboard
-        strip_path: false
+        strip_path: true
