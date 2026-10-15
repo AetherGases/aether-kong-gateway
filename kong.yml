@@ -1,35 +1,35 @@
 _format_version: "3.0"
 services:
   - name: aether-ms-auth
-    url: http://aether-ms-auth.aether.svc.cluster.local:8080
+    url: http://aether-ms-auth.default.svc.cluster.local:8080
     routes:
       - name: aether-ms-auth-route
         paths:
           - /auth
         strip_path: true
   - name: aether-ms-calculator
-    url: http://aether-ms-calculator.aether.svc.cluster.local:8080
+    url: http://aether-ms-calculator.default.svc.cluster.local:8080
     routes:
       - name: aether-ms-calculator-route
         paths:
           - /calculator
         strip_path: true
   - name: aether-ms-inventory
-    url: http://aether-ms-inventory.aether.svc.cluster.local:8080
+    url: http://aether-ms-inventory.default.svc.cluster.local:8080
     routes:
       - name: aether-ms-inventory-route
         paths:
           - /inventory
         strip_path: true
   - name: aether-ms-cloudinary
-    url: http://aether-ms-cloudinary.aether.svc.cluster.local:8080
+    url: http://aether-ms-cloudinary.default.svc.cluster.local:8080
     routes:
       - name: aether-ms-cloudinary-route
         paths:
           - /cloudinary
         strip_path: true
   - name: ms-aeko-hub
-    url: http://ms-aeko-hub.aether.svc.cluster.local:8000
+    url: http://ms-aeko-hub.default.svc.cluster.local:8000
     connect_timeout: 2147483646
     write_timeout: 2147483646
     read_timeout: 2147483646
@@ -39,16 +39,16 @@ services:
           - /hub
         strip_path: true
   - name: aether-web-administrative
-    url: http://aether-web-administrative.aether.svc.cluster.local:8080
+    url: http://aether-web-administrative.default.svc.cluster.local:8080
     routes:
       - name: aether-web-administrative-route
         paths:
           - /
         strip_path: true
   - name: aether-web-flow
-    url: http://aether-web-flow.aether.svc.cluster.local:80
+    url: http://aether-web-flow.default.svc.cluster.local:80
     routes:
       - name: aether-web-flow-route
         paths:
           - /dashboard
-        strip_path: false
+        strip_path: true
