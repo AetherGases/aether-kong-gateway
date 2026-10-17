@@ -5,29 +5,29 @@ services:
     routes:
       - name: aether-ms-auth-route
         paths:
-          - /auth
-        strip_path: true
+          - /api/auth
+        strip_path: false
   - name: aether-ms-calculator
     url: http://aether-ms-calculator.aether.svc.cluster.local:8080
     routes:
       - name: aether-ms-calculator-route
         paths:
-          - /calculator
-        strip_path: true
+          - /api/calculator
+        strip_path: false
   - name: aether-ms-inventory
     url: http://aether-ms-inventory.aether.svc.cluster.local:8080
     routes:
       - name: aether-ms-inventory-route
         paths:
-          - /inventory
-        strip_path: true
+          - /api/inventories
+        strip_path: false
   - name: aether-ms-cloudinary
     url: http://aether-ms-cloudinary.aether.svc.cluster.local:8080
     routes:
       - name: aether-ms-cloudinary-route
         paths:
-          - /cloudinary
-        strip_path: true
+          - /api/cloudinary
+        strip_path: false
   - name: ms-aeko-hub
     url: http://ms-aeko-hub.aether.svc.cluster.local:8000
     connect_timeout: 2147483646
