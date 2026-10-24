@@ -38,6 +38,17 @@ services:
         paths:
           - /hub
         strip_path: true
+        preserve_host: true
+      - name: ms-aeko-hub-mcp
+        paths:
+          - "~/hub/ai/mcp$"
+        strip_path: false
+        preserve_host: true
+        plugins:
+          - name: request-transformer
+            config:
+              replace:
+                uri: /ai/mcp/
   - name: aether-web-administrative
     url: http://aether-web-administrative.aether.svc.cluster.local:8080
     routes:
