@@ -50,6 +50,13 @@ services:
             config:
               replace:
                 uri: /ai/mcp/
+  - name: aether-web-bff
+    url: http://aether-web-bff.aether.svc.cluster.local:3001
+    routes:
+      - name: aether-web-bff-route
+        paths:
+          - /api/v1
+        strip_path: false
   - name: aether-web-administrative
     url: http://aether-web-administrative.aether.svc.cluster.local:8080
     routes:
