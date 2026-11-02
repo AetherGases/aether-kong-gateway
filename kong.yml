@@ -7,6 +7,7 @@ services:
         paths:
           - /api/auth
           - /api/profile
+          - /api/support
         strip_path: false
   - name: aether-ms-calculator
     url: http://aether-ms-calculator.aether.svc.cluster.local:8080
